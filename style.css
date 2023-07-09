@@ -1,0 +1,245 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+:root {
+  --primary-color: #047aed;
+  --light-color: #fff;
+  --dark-color: #435b66;
+}
+
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--light-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  color: var(--light-color);
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 2rem 0;
+  color: var(--light-color);
+}
+
+/* Header Section CSS */
+.header {
+  background-color: var(--primary-color);
+  overflow: auto;
+  height: 10rem;
+}
+
+.header .flex {
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 3.2rem;
+}
+
+.main-menu a {
+  font-size: 1.6rem;
+  padding: 2rem;
+  font-weight: 300;
+}
+
+/* Hero Section CSS */
+.hero-section {
+  height: 45rem;
+  background: var(--primary-color);
+  padding: 0 4rem;
+  position: relative;
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  height: 10rem;
+  bottom: -7rem;
+  right: 0;
+  left: 0;
+  background: var(--light-color);
+  transform: skewY(-3deg);
+}
+
+.hero-section .grid {
+  grid-template-columns: 55% 45%;
+  gap: 2rem;
+}
+
+/* Hero Text Css */
+.hero-text h2 {
+  font-size: 4rem;
+}
+
+.hero-btn {
+  background: transparent;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+}
+
+/* Hero Card CSS */
+.hero-card {
+  position: relative;
+  top: 6rem;
+  height: 35rem;
+  width: 40rem;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+.hero-card h3 {
+  color: var(--dark-color);
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Arial", sans-serif;
+}
+
+.hero-card .form-item {
+  margin: 3rem 0;
+}
+
+.hero-card input {
+  border: none;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.hero-card .form-btn {
+  background: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0.5rem 3rem;
+}
+
+/* Utilities */
+.container {
+  width: 110rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  line-height: 1.7;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.card {
+  background: var(--light-color);
+  padding: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 1300px) {
+  .container {
+    width: 90rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 85rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-section {
+    height: 75rem;
+  }
+  .hero-section .grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .hero-card {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 60rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    width: 30rem;
+  }
+}
+
